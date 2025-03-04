@@ -24,7 +24,7 @@ for i, address in enumerate(addresses):
         print(f'{i/len(addresses)*100:.2f}%')
     x = geocode(address)
     try:
-        mapping[address] = (x.longitude, x.latitude)
+        mapping[address] = {'Longitude': x.longitude, 'Latitude': x.latitude}
     except:
         mapping[address] = (np.nan, np.nan)
 
